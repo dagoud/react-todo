@@ -44,6 +44,8 @@ describe('Adding items to Todo List', () => {
         assertTodoItemsAppearInTodoList("item 1", "item 2", "item 3")
     })
 
+    // addItem using enter key instead of mouse click
+
 })
 
 // describe('Todo List item interaction', () => {
@@ -59,6 +61,8 @@ function addTodoItems(...todoItems) {
         act(() => {
             addbutton.dispatchEvent(new MouseEvent("click", { bubbles: true }))
         });
+
+        expect(newItemInput).toHaveValue("")
     }
 }
 
