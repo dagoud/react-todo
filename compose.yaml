@@ -9,9 +9,10 @@
 # https://github.com/docker/awesome-compose
 services:
   app:
-    image: vite-react-todo
-    # build:
-    #   context: .
+    image: dagoud78/react-todo:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
     environment:
       NODE_ENV: production
     ports:
